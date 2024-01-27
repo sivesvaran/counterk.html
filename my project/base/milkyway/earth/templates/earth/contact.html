@@ -1,0 +1,53 @@
+{% load static %}
+<html lang="en">
+<head>
+    
+    <title>Want Web-contact</title>
+    <link rel = "icon" href = 
+      "{% static 'images/logo.png' %}" 
+              type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    body{
+      font-family: 'Roboto', sans-serif;
+font-family: 'Sassy Frass', cursive;
+font-family: 'Splash', cursive;
+background-image: url("{% static 'images/background.png' %}");
+    }
+    </style>
+</head>
+<div class="navbar">
+    <nav id="navbar-example2" class="navbar navbar-default navbar-inverse navbar-fixed">
+        
+      <a class="navbar-brand" href="{% url 'index' %}"> want web</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">contact us</a>
+        
+      </ul>
+    </nav>
+    </div>
+<body>
+    
+        <div class="container">
+            <div class="jumbotron" id="contact">
+                {% if registered %}
+                <h1>To Contact Us </h1> <ul>
+                  <li>Instagram wantweb</li>
+                  <li><h1>Or Email To wantweb123@gmail.com</h1></li>
+                </ul> 
+              {% else %}
+                <h1>Register Here</h1>
+                <h3>Just fill out the form.</h3>
+        
+                <form  method="POST">
+                  {% csrf_token %}
+                  {{ user_form.as_p }}
+                  
+                  <input type="submit"  value="Register">
+                </form>
+                {% endif %}
+            </div>
+        </div> 
+</body>
+</html>

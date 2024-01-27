@@ -1,0 +1,85 @@
+{% load static %}
+<html lang="en">
+<head>
+   
+    <title>Want Web</title>
+    <link rel = "icon" href = 
+      "{% static 'images/logo.png' %}" 
+              type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      body{
+        
+        font-size: small;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Sassy Frass', cursive;
+font-family: 'Splash', cursive;
+background-image: url("{% static 'images/background.png' %}");
+
+      }
+      li.hover{
+        background-color: aqua;
+      }
+      .navbar {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the bottom of the page */
+  width: 100%;
+  height: 10%;
+}
+#quote{
+  background-color: rgb(13, 13, 16);
+}
+      
+
+    </style>
+</head>
+
+  <div class="navbar">
+<nav id="navbar-example2" class="navbar navbar-default navbar-inverse navbar-fixed">
+    
+  <a class="navbar-brand" href="#"> WANT WEB</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#about">about us</a>
+    </li>
+    <li><a class="nav-link"  href="#for">what we make</a></li>
+    <li><a class="nav-link"href="#why">Why we make</a></li>
+    <li><a class="nav-link"href="{% url 'contact' %}">Contact Us</a></li>
+  </ul>
+</nav>
+</div>
+
+<body>
+ <h1>sives</h1>
+  
+    <div class="container">
+
+ 
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <div class="jumbotron" id="quote">
+      <p><h1>If your business is not <br> on the internet,then your business <br>will be out of business <br>  
+                -Bill gates</h1></p>
+    </div>
+     <div class="jumbotron" id="about"> 
+      <h1>Who Are We?</h1>
+      <p>we are highschool <b>BOYS</b>. <br> who aim to make websites for the one who needs</p>
+     </div>
+   <div class="jumbotron"id="for">
+    <h1>What we make?</h1>
+    <p>we are group of young and energetic people who make <b>Websites</b><br>And Our Websites Are The <b>Best</b></p>
+   </div>
+   <div class="jumbotron" id="why">
+   <h1>Our speciality?</h1>
+   <ul>
+    <li>
+    <h4>We are free for <b>non-funded</b> organizations which aim to make websites</h4> </li>
+    <li><h4>We offer you the best <b>websites</b> for <b>least cost</b> <h4></li>
+    <li><h4>You can <b>expose</b> your business idea in the internet </h4></li>
+  </ul> 
+   </div>
+  
+        
+  </div>
+  </div>  
+</body>
+</html>
